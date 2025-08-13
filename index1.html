@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HealthLink • Home</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container topbar">
+      <div class="brand"><span class="logo"></span> HealthLink</div>
+      <nav><menu>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="consult.html">Consult</a>
+        <a href="diagnosis.html">Diagnosis</a>
+        <a href="appointment.html">Appointment</a>
+        <a href="privacy.html">Privacy</a>
+      </menu></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="grid cols-3">
+      <div class="card">
+        <h1>Welcome to HealthLink</h1>
+        <p>Your simple portal to register, consult a doctor, run a quick self‑check, and book an appointment at the nearest hospital.</p>
+        <p><a class="btn" href="consult.html">Talk to a doctor</a> <a class="btn secondary" href="appointment.html">Book appointment</a></p>
+      </div>
+      <div class="card">
+        <h2>Recent Appointments</h2>
+        <div id="apptsMount"></div>
+      </div>
+      <div class="card">
+        <h2>Latest Messages</h2>
+        <div id="msgsMount"></div>
+      </div>
+    </div>
+
+    <hr>
+    <p class="small">Tip: Register to save your details for faster booking and consultations.</p>
+  </main>
+
+  <footer>
+    <div class="container small">
+      <div id="welcomeMount"></div>
+      <hr>© <span id="y"></span> HealthLink. For education/demo use only.
+    </div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

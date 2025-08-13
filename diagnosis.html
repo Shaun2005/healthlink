@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HealthLink • Diagnosis</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand"><span class="logo"></span> HealthLink</div>
+      <nav><menu>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="consult.html">Consult</a>
+        <a href="diagnosis.html">Diagnosis</a>
+        <a href="appointment.html">Appointment</a>
+        <a href="privacy.html">Privacy</a>
+      </menu></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Quick symptom checker</h1>
+      <form id="dxForm">
+        <label>Common symptoms</label>
+        <div class="row">
+          <label><input type="checkbox" value="Fever"> Fever</label>
+          <label><input type="checkbox" value="Cough"> Cough</label>
+          <label><input type="checkbox" value="Fatigue"> Fatigue</label>
+          <label><input type="checkbox" value="Headache"> Headache</label>
+          <label><input type="checkbox" value="Stiff neck"> Stiff neck</label>
+          <label><input type="checkbox" value="Chest pain"> Chest pain</label>
+          <label><input type="checkbox" value="Shortness of breath"> Shortness of breath</label>
+          <label><input type="checkbox" value="Abdominal pain"> Abdominal pain</label>
+          <label><input type="checkbox" value="Vomiting"> Vomiting</label>
+        </div>
+        <label for="freeText">Anything else we should know?</label>
+        <textarea id="freeText" name="freeText" rows="4" placeholder="Duration, triggers, medications, pregnancy, allergies..."></textarea>
+        <p><button class="btn">Get guidance</button></p>
+      </form>
+      <div id="dxResult"></div>
+      <p class="help">This is not a diagnosis. For urgent symptoms (severe pain, difficulty breathing, bleeding, fainting), seek emergency care.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small"><div id="welcomeMount"></div><hr>© <span id="y"></span> HealthLink.</div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

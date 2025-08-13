@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HealthLink • Privacy Policy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand"><span class="logo"></span> HealthLink</div>
+      <nav><menu>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="consult.html">Consult</a>
+        <a href="diagnosis.html">Diagnosis</a>
+        <a href="appointment.html">Appointment</a>
+        <a href="privacy.html">Privacy</a>
+      </menu></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Privacy Policy</h1>
+      <p>This demo stores your form entries on your own device using <b>localStorage</b>. We do not transmit your data to any server.</p>
+      <ul>
+        <li><b>Registration:</b> name, email, and phone are saved locally.</li>
+        <li><b>Consultation chat:</b> messages are saved locally and can be cleared by clearing your browser data.</li>
+        <li><b>Diagnosis:</b> selected symptoms and notes may be stored locally for your history.</li>
+        <li><b>Appointments:</b> bookings are saved locally so they show on the Home page.</li>
+      </ul>
+      <p>Because there is no cloud storage, if you switch devices or clear site data you will lose your records. For a production site, use a secure backend, HTTPS, and healthcare‑grade data protections.</p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small"><div id="welcomeMount"></div><hr>© <span id="y"></span> HealthLink.</div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

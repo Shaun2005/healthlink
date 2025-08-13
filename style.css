@@ -1,0 +1,85 @@
+/* Global style */
+:root{
+  --bg: #7fffd4;       /* aquamarine */
+  --ink:#08343a;
+  --ink-soft:#0e5e68;
+  --card:#ffffff;
+  --accent:#0aa2a2;
+  --accent-2:#037a7a;
+  --ring: rgba(10,162,162,.25);
+}
+
+*{box-sizing:border-box}
+html,body{
+  margin:0; padding:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+.container{max-width:1050px; margin:0 auto; padding:24px}
+
+header{
+  background: linear-gradient(0deg, rgba(0,0,0,.03), rgba(0,0,0,.03)), var(--bg);
+  border-bottom: 1px solid rgba(0,0,0,.08);
+  position: sticky; top:0; z-index: 10;
+  backdrop-filter: blur(6px);
+}
+.brand{display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.3px}
+.brand .logo{
+  width:36px; height:36px; border-radius:10px; display:inline-block;
+  background:#fff; border:2px solid var(--accent); box-shadow:0 2px 0 rgba(0,0,0,.06) inset;
+}
+nav a{
+  text-decoration:none; color:var(--ink);
+  padding:10px 14px; border-radius:8px; font-weight:600
+}
+nav a:hover, nav a.active{background:#fff; color:var(--accent-2)}
+.topbar{display:flex; align-items:center; justify-content:space-between; gap:16px}
+menu{display:flex; gap:6px; padding:0; margin:0}
+
+h1,h2{margin:.2em 0}
+h1{font-size:28px}
+h2{font-size:22px}
+
+.card{
+  background: var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px; padding:18px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.04);
+}
+
+.grid{display:grid; gap:16px}
+.grid.cols-3{grid-template-columns: repeat(auto-fit, minmax(240px,1fr))}
+.grid.cols-2{grid-template-columns: repeat(auto-fit, minmax(320px,1fr))}
+
+.btn{
+  display:inline-block; border:none; padding:10px 14px; border-radius:10px;
+  background: var(--accent); color:#fff; font-weight:700; cursor:pointer;
+}
+.btn.secondary{background:#fff; color:var(--accent-2); border:1px solid var(--accent-2)}
+.btn:focus{outline:3px solid var(--ring)}
+
+input, select, textarea{
+  width:100%; padding:12px 12px; border-radius:10px; border:1px solid rgba(0,0,0,.12);
+  background:#fff; font:inherit; color:var(--ink);
+}
+label{font-weight:600; display:block; margin:10px 0 6px}
+form .row{display:grid; gap:12px; grid-template-columns:repeat(auto-fit, minmax(220px,1fr))}
+.help{font-size:12px; color:var(--ink-soft)}
+
+.table{width:100%; border-collapse:collapse}
+.table th,.table td{padding:10px 12px; border-bottom:1px solid rgba(0,0,0,.08); text-align:left}
+.badge{display:inline-block; padding:4px 10px; border-radius:999px; background: #e8fffb; color: var(--accent-2); font-weight:700; font-size:12px}
+
+footer{padding:40px 0; text-align:center; color:var(--ink-soft)}
+hr{border:none; border-top:1px solid rgba(0,0,0,.1); margin:16px 0}
+.small{font-size:13px}
+
+.chat{
+  height:340px; overflow:auto; border:1px solid rgba(0,0,0,.08); border-radius:12px; padding:12px; background:#f7fffd;
+}
+.msg{margin:6px 0; padding:8px 12px; border-radius:12px; max-width:80%}
+.msg.you{background:#fff; border:1px solid rgba(0,0,0,.07); margin-left:auto}
+.msg.doc{background:#e9fbff; border:1px solid rgba(0,0,0,.07)}
+.callbox{display:flex; gap:10px; align-items:center}
+kbd{background:#fff;border:1px solid rgba(0,0,0,.2); border-bottom-width:2px; padding:2px 6px; border-radius:6px; font-family:ui-monospace, SFMono-Regular, Menlo, monospace; font-size:12px}

@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HealthLink • Consult a Doctor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container topbar">
+      <div class="brand"><span class="logo"></span> HealthLink</div>
+      <nav><menu>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="consult.html">Consult</a>
+        <a href="diagnosis.html">Diagnosis</a>
+        <a href="appointment.html">Appointment</a>
+        <a href="privacy.html">Privacy</a>
+      </menu></nav>
+    </div>
+  </header>
+
+  <main class="container grid cols-2">
+    <section class="card">
+      <h1>Chat with a doctor</h1>
+      <div id="chatBox" class="chat" aria-live="polite"></div>
+      <form id="chatForm" style="margin-top:10px">
+        <label for="message">Your message</label>
+        <input id="message" name="message" placeholder="Describe your concern...">
+        <p><button class="btn">Send</button></p>
+      </form>
+      <div class="help">Messages are saved locally on this device.</div>
+    </section>
+
+    <section class="card">
+      <h2>Call a doctor</h2>
+      <p>Prefer to talk? Use the button below to place a voice call to our triage line.</p>
+      <div class="callbox">
+        <button id="callNow" class="btn">Call now</button>
+        <span class="small">Dial shortcut uses your phone app.</span>
+      </div>
+      <hr>
+      <p class="small">Hotlines: <a href="tel:+233201234567">+233 20 123 4567</a> · <a href="tel:+233271234567">+233 27 123 4567</a></p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container small"><div id="welcomeMount"></div><hr>© <span id="y"></span> HealthLink.</div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

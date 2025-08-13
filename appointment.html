@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HealthLink • Book Appointment</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <div class="brand"><span class="logo"></span> HealthLink</div>
+      <nav><menu>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="consult.html">Consult</a>
+        <a href="diagnosis.html">Diagnosis</a>
+        <a href="appointment.html">Appointment</a>
+        <a href="privacy.html">Privacy</a>
+      </menu></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Book an appointment</h1>
+      <form id="apptForm">
+        <div class="row">
+          <div>
+            <label for="name">Your name</label>
+            <input id="name" name="name" placeholder="Ama Mensah">
+          </div>
+          <div>
+            <label for="reason">Reason for visit</label>
+            <input id="reason" name="reason" placeholder="Persistent cough">
+          </div>
+          <div>
+            <label for="date">Preferred date</label>
+            <input id="date" name="date" type="date">
+          </div>
+          <div>
+            <label for="time">Preferred time</label>
+            <input id="time" name="time" type="time">
+          </div>
+        </div>
+
+        <label>Hospital</label>
+        <div class="row">
+          <div>
+            <select id="hospital" name="hospital">
+              <option value="">Choose from list (optional)</option>
+              <option>Korle-Bu Teaching Hospital</option>
+              <option>37 Military Hospital</option>
+              <option>Komfo Anokye Teaching Hospital</option>
+              <option>Cape Coast Teaching Hospital</option>
+              <option>Tamale Teaching Hospital</option>
+            </select>
+          </div>
+          <div>
+            <input id="nearest" name="nearest" placeholder="Nearest facility will appear here">
+          </div>
+          <div>
+            <button class="btn" type="button" id="findNearest">Use my location</button>
+          </div>
+        </div>
+
+        <p><button class="btn" type="submit">Book now</button></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small"><div id="welcomeMount"></div><hr>© <span id="y"></span> HealthLink.</div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

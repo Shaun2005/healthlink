@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HealthLink • Register</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container topbar">
+      <div class="brand"><span class="logo"></span> HealthLink</div>
+      <nav><menu>
+        <a href="index.html">Home</a>
+        <a href="register.html">Register</a>
+        <a href="consult.html">Consult</a>
+        <a href="diagnosis.html">Diagnosis</a>
+        <a href="appointment.html">Appointment</a>
+        <a href="privacy.html">Privacy</a>
+      </menu></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="card">
+      <h1>Create your account</h1>
+      <form id="registerForm">
+        <div class="row">
+          <div>
+            <label for="fullName">Full name</label>
+            <input id="fullName" name="fullName" placeholder="Ama Mensah">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="you@example.com">
+          </div>
+          <div>
+            <label for="phone">Phone</label>
+            <input id="phone" name="phone" type="tel" placeholder="+233 20 000 0000">
+          </div>
+          <div>
+            <label for="password">Password</label>
+            <input id="password" name="password" type="password" placeholder="••••••••">
+            <div class="help">Demo only: stored locally on your device.</div>
+          </div>
+        </div>
+        <p><button class="btn" type="submit">Register</button></p>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container small"><div id="welcomeMount"></div><hr>© <span id="y"></span> HealthLink.</div>
+    <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
